@@ -7,7 +7,7 @@ export async function POST(
   const body = await req.json();
 
   const res = await fetch(
-    process.env.ALCHEMY_API_URL + `/${params.routes.join("/")}`,
+    "https://api.g.alchemy.com" + `/${params.routes.join("/")}`,
     {
       method: "POST",
       headers: {
