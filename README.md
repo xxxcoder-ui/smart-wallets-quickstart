@@ -1,24 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Please this [quick start guide](https://alchemotion.notion.site/Alchemy-Account-Kit-UI-Components-Alpha-Quickstart-0805fd3fb8ba4c15bfd88846d4ad53ea?pvs=74) to test out Alchemy Account Kit Alpha UI Components. 
+
+![image](https://github.com/user-attachments/assets/b7a820e7-1927-4bee-8eaa-52ca4af0f87a)
+
+This is a [Next.js](https://nextjs.org/) template bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, download the template:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn create next-app my-smart-app -e https://github.com/avarobinson/embedded-accounts-ui-components-alpha-quickstart-nextjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Get you alchemy api key
+- Create a new embedded accounts configuration for an alchemy app in your [dashboard](https://dashboard.alchemy.com/accounts)
+- Replace the api key in the config.ts file
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the app
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Follow this [quick start guide](https://alchemotion.notion.site/Alchemy-Account-Kit-UI-Components-Alpha-Quickstart-0805fd3fb8ba4c15bfd88846d4ad53ea?pvs=74) for more details!
 
 ## Learn More
 
