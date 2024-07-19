@@ -9,16 +9,14 @@ export const Providers = (
   props: PropsWithChildren<{ initialState?: AlchemyClientState }>
 ) => {
   return (
-    <Suspense>
-      <QueryClientProvider client={queryClient}>
-        <AlchemyAccountProvider
-          config={config}
-          queryClient={queryClient}
-          initialState={props.initialState}
-        >
-          {props.children}
-        </AlchemyAccountProvider>
-      </QueryClientProvider>
-    </Suspense>
+    <QueryClientProvider client={queryClient}>
+      <AlchemyAccountProvider
+        config={config}
+        queryClient={queryClient}
+        initialState={props.initialState}
+      >
+        {props.children}
+      </AlchemyAccountProvider>
+    </QueryClientProvider>
   );
 };
