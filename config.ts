@@ -11,7 +11,7 @@ const uiConfig: AlchemyAccountsUIConfig = {
   auth: {
     sections: [
       [{ type: "email" as const }],
-      [{ type: "passkey" as const }, { type: "injected" }],
+      [{ type: "passkey" as const }, { type: "external_wallets" }],
     ],
     addPasskeyOnSignup: false,
   },
