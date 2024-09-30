@@ -1,4 +1,7 @@
-Please this [quick start guide](https://alchemotion.notion.site/Alchemy-Account-Kit-UI-Components-Alpha-Quickstart-0805fd3fb8ba4c15bfd88846d4ad53ea?pvs=74) to test out Alchemy Account Kit Alpha UI Components. 
+See [accountkit.alchemy.com](https://accountkit.alchemy.com/) for the most up to date documentation!
+
+- [quick start guide](https://accountkit.alchemy.com/react/quickstart) to test out Alchemy Account Kit Alpha UI Components
+- [demo of UI components](https://aa-sdk-ui-demo.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/b7a820e7-1927-4bee-8eaa-52ca4af0f87a)
 
@@ -21,7 +24,7 @@ yarn create next-app my-smart-app -e https://github.com/avarobinson/embedded-acc
 yarn dev
 ```
 
-Follow this [quick start guide](https://alchemotion.notion.site/Alchemy-Account-Kit-UI-Components-Alpha-Quickstart-0805fd3fb8ba4c15bfd88846d4ad53ea?pvs=74) for more details!
+Follow this [quick start guide](https://accountkit.alchemy.com/) for more details!
 
 ## Learn More
 
