@@ -2,47 +2,47 @@
 # yarn lockfile v1
 
 
-"@aa-sdk/core@^4.0.0-beta.7":
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@aa-sdk/core/-/core-4.0.0-beta.7.tgz#43c3c1395da997fcc5e150adb3bc6239e4e07ee9"
-  integrity sha512-+zJicDDKZ24sKEQ05yf3xH5/oao0BjvJ4yHfzGLziGTg8PyWZ7uiFvBUJkgIIK6TywTUMO7FtoMBuwMwOYPRGQ==
+"@aa-sdk/core@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@aa-sdk/core/-/core-4.0.0-beta.8.tgz#89015bf948f9de620ab9708250363f1fc8ea29dd"
+  integrity sha512-DC7+6l72QmnCoE4VdhQMmeErSGO4P+P6tNBHborNhW2JH/MDXnentKLhpMwLcdNdghE4CC9pfKQGQy8IoszYDw==
   dependencies:
     abitype "^0.8.3"
     eventemitter3 "^5.0.1"
     zod "^3.22.4"
 
-"@account-kit/core@^4.0.0-beta.7":
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@account-kit/core/-/core-4.0.0-beta.7.tgz#b4e6e7f10e84c2528284a506840ccaf3c0e3ddcd"
-  integrity sha512-w3H+tOJbhHVkiAgKZkmwrPzHT01Y6gmulwbPVjetA3shEm27DkbrD/sdSTzuOKkHtD3PI770H3L7TP1WqiFDQQ==
+"@account-kit/core@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@account-kit/core/-/core-4.0.0-beta.8.tgz#a2fee81887ef763aec62c2f26cb0b548fd4870d9"
+  integrity sha512-u4XBt6dYQMqV+8LN32OD+c//tGuVDmRfSMHBrhgm45qNKLQkzHVWcrqsPB1cRrWNkSnEoD8uLlYYIs7zSe56EQ==
   dependencies:
-    "@account-kit/infra" "^4.0.0-beta.7"
-    "@account-kit/signer" "^4.0.0-beta.7"
-    "@account-kit/smart-contracts" "^4.0.0-beta.7"
+    "@account-kit/infra" "^4.0.0-beta.8"
+    "@account-kit/signer" "^4.0.0-beta.8"
+    "@account-kit/smart-contracts" "^4.0.0-beta.8"
     js-cookie "^3.0.5"
     zod "^3.22.4"
     zustand "^4.5.2"
   optionalDependencies:
     alchemy-sdk "^3.0.0"
 
-"@account-kit/infra@^4.0.0-beta.7":
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@account-kit/infra/-/infra-4.0.0-beta.7.tgz#62a609b942a7a0d015e7a9f532483b40e757f321"
-  integrity sha512-TvvnJt5B/NL05QJF2pAAjVyK7IxNs9mKLM6BtM+zo8mspW4Y2jIGbK9C5V4BSDdjjL4meDLaGPNTjJc4FJbROA==
+"@account-kit/infra@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@account-kit/infra/-/infra-4.0.0-beta.8.tgz#0f4fb8c4801569a6d3b97493e6926d875a2ef0ea"
+  integrity sha512-d4/wcgeNnbZHbKw0mP/10EFqIOa2RCzYYYp18JiNqyOQDI5nFkyfwpX26cS3ILQ5tbmq+LrwjuNaXOjDKUXFQg==
   dependencies:
-    "@aa-sdk/core" "^4.0.0-beta.7"
+    "@aa-sdk/core" "^4.0.0-beta.8"
     eventemitter3 "^5.0.1"
     zod "^3.22.4"
   optionalDependencies:
     alchemy-sdk "^3.0.0"
 
-"@account-kit/react@^4.0.0-beta.7":
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@account-kit/react/-/react-4.0.0-beta.7.tgz#f97da77ef09469718e7dda5f1e2f0fb4a97e2fa4"
-  integrity sha512-jtuA9rQsr7fNvdvp/K1Ri40JNwgJUY7PGT/hRBwXksPHyLl8T3YaVsC6SACAUYN2kjvVSH2lHXNLymTWobE92A==
+"@account-kit/react@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@account-kit/react/-/react-4.0.0-beta.8.tgz#f8e0eec8db1d707435e8f4cda05fb8b2366a77d3"
+  integrity sha512-3PER+QOsNcFbPSHPr7GuV5Khyr1kRwgHOt6x+J6Ps6XAHH/ROaIRqGcHu2SL/eBPPIwhV/txIZi26b3TjP0asw==
   dependencies:
-    "@account-kit/core" "^4.0.0-beta.7"
-    "@account-kit/infra" "^4.0.0-beta.7"
+    "@account-kit/core" "^4.0.0-beta.8"
+    "@account-kit/infra" "^4.0.0-beta.8"
     "@tanstack/react-form" "^0.19.4"
     "@tanstack/zod-form-adapter" "^0.19.4"
     "@wagmi/connectors" "^4.3.9"
@@ -53,25 +53,25 @@
   optionalDependencies:
     alchemy-sdk "^3.0.0"
 
-"@account-kit/signer@^4.0.0-beta.7":
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@account-kit/signer/-/signer-4.0.0-beta.7.tgz#dd2c3280d0e75dfa45cef19fedc0fd31e7e3dabd"
-  integrity sha512-F0tgewp9cTaYRqGjzuesI8nEvMiF//+ngGuIJTBj1vIH825jL7gfWdJNWgWit5Zcw2TthN/pOVA557HXrhjfVQ==
+"@account-kit/signer@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@account-kit/signer/-/signer-4.0.0-beta.8.tgz#a716f6a29676900f3bfceca88c9c31f58782aea4"
+  integrity sha512-MZNBxEayTe+N0GyD00P5Z5yjXIcCVBnQM5E6s1wPLfU1ktEQccQa744UJRiIROIg0dOXMBIOnkpwtHhU95b1pg==
   dependencies:
-    "@aa-sdk/core" "^4.0.0-beta.7"
+    "@aa-sdk/core" "^4.0.0-beta.8"
     "@turnkey/http" "^2.6.2"
     "@turnkey/iframe-stamper" "^1.0.0"
     "@turnkey/viem" "^0.4.8"
     "@turnkey/webauthn-stamper" "^0.4.3"
     zod "^3.22.4"
 
-"@account-kit/smart-contracts@^4.0.0-beta.7":
-  version "4.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@account-kit/smart-contracts/-/smart-contracts-4.0.0-beta.7.tgz#a81bc31966f1c2dcf3ba9c783aca96a741485b8f"
-  integrity sha512-oCb83NSIPnm5x6WnW6Glutagx2beIn/8IJ7XxMbC3rDC0cwkPcoO3j1H6P4ADRcqlyio36gnvBNnNRBIpsd4YA==
+"@account-kit/smart-contracts@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@account-kit/smart-contracts/-/smart-contracts-4.0.0-beta.8.tgz#6ae4e4c8d929c8c1050345bc09dc85f5cca0b829"
+  integrity sha512-QK8AlvgT3Wch57agx9C3YsSs9tYMsgkTKmEL+lEZn5VTwB/489wsNk9Ui0lVC+02+65byVINbY2nrXxoNiul6A==
   dependencies:
-    "@aa-sdk/core" "^4.0.0-beta.7"
-    "@account-kit/infra" "^4.0.0-beta.7"
+    "@aa-sdk/core" "^4.0.0-beta.8"
+    "@account-kit/infra" "^4.0.0-beta.8"
 
 "@adraffy/ens-normalize@1.10.0":
   version "1.10.0"

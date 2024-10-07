@@ -3,7 +3,7 @@ import {
   cookieStorage,
   createConfig,
 } from "@account-kit/react";
-import { sepolia } from "@account-kit/infra";
+import { alchemy, sepolia } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
 
 const uiConfig: AlchemyAccountsUIConfig = {
@@ -19,10 +19,10 @@ const uiConfig: AlchemyAccountsUIConfig = {
 
 export const config = createConfig(
   {
-    apiKey: "alchemy_api_key", // TODO: insert your Alchemy API key - setup your app & embedded account config at https://dashboard.alchemy.com/accounts
+    transport: alchemy({ apiKey: "ALCHEMY_API_KEY" }), // TODO: add your Alchemy API key - https://dashboard.alchemy.com/accounts
     chain: sepolia,
-    ssr: true, // read more about server side rendering (ssr) practices: https://accountkit.alchemy.com/react/ssr
-    storage: cookieStorage, // read more about persisting state with cookies: https://accountkit.alchemy.com/react/ssr#persisting-the-account-state
+    ssr: true, // more about ssr: https://accountkit.alchemy.com/react/ssr
+    storage: cookieStorage, // more about persisting state with cookies: https://accountkit.alchemy.com/react/ssr#persisting-the-account-state
   },
   uiConfig
 );
