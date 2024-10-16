@@ -1,6 +1,6 @@
 See [accountkit.alchemy.com](https://accountkit.alchemy.com/) for the most up to date documentation!
 
-- [quick start guide](https://accountkit.alchemy.com/react/quickstart) to test out Alchemy Account Kit Alpha UI Components
+- [quick start guide](https://accountkit.alchemy.com/react/quickstart) to Account Kit
 - [demo](https://demo.alchemy.com/)
 
 ![image](https://github.com/user-attachments/assets/b7a820e7-1927-4bee-8eaa-52ca4af0f87a)
