@@ -17,7 +17,7 @@ export default function Home() {
         <main className="container mx-auto px-4 py-8 h-full">
           {signerStatus.isConnected ? (
             <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col justify-between">
                 <UserInfoCard />
                 <LearnMore />
               </div>

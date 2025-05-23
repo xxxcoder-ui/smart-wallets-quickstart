@@ -4,11 +4,11 @@ Template for building **embedded smart wallets** with [Alchemy Account Kit](http
 
 ## ✨ Features
 
-* Email, passkey & social login via pre‑built Account Kit modal
-* Smart account with sponsored gas via Paymaster policy
-* One‑click NFT mint on Base Sepolia (no ETH required)
-* Server‑side rendering ready – session persisted with cookies
-* TailwindCSS + shadcn/ui components, React Query, TypeScript
+- Email, passkey & social login via pre‑built Account Kit modal
+- Smart account with sponsored gas via Paymaster policy
+- One‑click NFT mint on Base Sepolia (no ETH required)
+- Server‑side rendering ready – session persisted with cookies
+- TailwindCSS + shadcn/ui components, React Query, TypeScript
 
 ## 🚀 Quick start
 
@@ -71,9 +71,9 @@ tailwind.config.ts
 
 ## 📚 Docs & resources
 
-* React Quickstart → [https://www.alchemy.com/docs/wallets/react/quickstart](https://www.alchemy.com/docs/wallets/react/quickstart)
-* Embedded accounts overview → [https://www.alchemy.com/docs/wallets/react/overview](https://www.alchemy.com/docs/wallets/react/overview)
-* Gas Manager quickstart → [https://www.alchemy.com/docs/wallets/infra/quickstart](https://www.alchemy.com/docs/wallets/infra/quickstart)
+- React Quickstart → [https://www.alchemy.com/docs/wallets/react/quickstart](https://www.alchemy.com/docs/wallets/react/quickstart)
+- Embedded accounts overview → [https://www.alchemy.com/docs/wallets/react/overview](https://www.alchemy.com/docs/wallets/react/overview)
+- Gas Manager quickstart → [https://www.alchemy.com/docs/wallets/infra/quickstart](https://www.alchemy.com/docs/wallets/infra/quickstart)
 
 ## 🖥 Scripts
 
