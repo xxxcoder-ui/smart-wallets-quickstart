@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // Persist state across pages
-  // https://accountkit.alchemy.com/react/ssr#persisting-the-account-state
+  // https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
   const initialState = cookieToInitialState(
     config,
     headers().get("cookie") ?? undefined

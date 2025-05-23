@@ -1,44 +1,89 @@
-See [accountkit.alchemy.com](https://accountkit.alchemy.com/) for the most up to date documentation!
+# Account Kit Quickstart (Next.js)
 
-- [quick start guide](https://accountkit.alchemy.com/react/quickstart) to Account Kit
-- [demo](https://demo.alchemy.com/)
+Template for building **embedded smart wallets** with [Alchemy Account Kit](https://www.alchemy.com/docs/wallets). Features gas‑sponsored transactions and an NFT minting demo.
 
-![image](https://github.com/user-attachments/assets/b7a820e7-1927-4bee-8eaa-52ca4af0f87a)
+## ✨ Features
 
-This is a [Next.js](https://nextjs.org/) template bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+* Email, passkey & social login via pre‑built Account Kit modal
+* Smart account with sponsored gas via Paymaster policy
+* One‑click NFT mint on Base Sepolia (no ETH required)
+* Server‑side rendering ready – session persisted with cookies
+* TailwindCSS + shadcn/ui components, React Query, TypeScript
 
-## Getting Started
+## 🚀 Quick start
 
-First, download the template:
+Choose the setup that fits your workflow.
+
+### Option A – scaffold a fresh app
 
 ```bash
-yarn create next-app account-kit-app -e https://github.com/avarobinson/account-kit-quickstart
+yarn create next-app account-kit-quickstart \
+  -e https://github.com/alchemyplatform/account-kit-quickstart
+cd account-kit-quickstart
 ```
 
-### Get you alchemy api key
-
-- Create a new embedded accounts configuration for an alchemy app in your [dashboard](https://dashboard.alchemy.com/accounts)
-- Replace the api key in the config.ts file
-
-### Run the app
+### Option B – clone the template repo
 
 ```bash
+git clone https://github.com/alchemyplatform/account-kit-quickstart.git
+cd account-kit-quickstart
+```
+
+Finish configuration:
+
+```bash
+cp .env.example .env.local      # create if missing
+# add NEXT_PUBLIC_ALCHEMY_API_KEY=...
+# add NEXT_PUBLIC_PAYMASTER_POLICY_ID=...
+
+yarn install
 yarn dev
 ```
 
-Follow this [quick start guide](https://accountkit.alchemy.com/) for more details!
+Open [http://localhost:3000](http://localhost:3000), click **Login**, then **Mint New NFT**.
 
-## Learn More
+## 🔧 Configuration
 
-To learn more about Next.js, take a look at the following resources:
+| Variable                          | Purpose                               |
+| --------------------------------- | ------------------------------------- |
+| `NEXT_PUBLIC_ALCHEMY_API_KEY`     | API key from your Alchemy dashboard   |
+| `NEXT_PUBLIC_PAYMASTER_POLICY_ID` | Gas Manager policy ID for sponsorship |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Customize chain, auth methods, or modal style in `config.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🗂 Project layout
 
-## Deploy on Vercel
+```
+app/           # Next.js pages & components
+components/ui/ # shadcn/ui primitives
+lib/           # constants & helpers
+config.ts      # Account Kit + Paymaster setup
+tailwind.config.ts
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ How it works
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. `config.ts` initializes Account Kit with your API key, Base Sepolia chain, and Paymaster policy.
+2. `Providers` wraps the app with `AlchemyAccountProvider` & React Query.
+3. `LoginCard` opens the authentication modal (`useAuthModal`).
+4. After login, `useSmartAccountClient` exposes the smart wallet.
+5. `NftMintCard` uses `useSendUserOperation` to call `mintTo()` on the demo ERC‑721, with gas paid by the Paymaster.
+
+## 📚 Docs & resources
+
+* React Quickstart → [https://www.alchemy.com/docs/wallets/react/quickstart](https://www.alchemy.com/docs/wallets/react/quickstart)
+* Embedded accounts overview → [https://www.alchemy.com/docs/wallets/react/overview](https://www.alchemy.com/docs/wallets/react/overview)
+* Gas Manager quickstart → [https://www.alchemy.com/docs/wallets/infra/quickstart](https://www.alchemy.com/docs/wallets/infra/quickstart)
+
+## 🖥 Scripts
+
+```bash
+yarn dev     # start development server
+yarn build   # production build
+yarn start   # run production build
+yarn lint    # lint code
+```
+
+## 🛂 License
+
+MIT
