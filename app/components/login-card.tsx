@@ -36,8 +36,8 @@ export default function LoginPage() {
         <CardDescription
           className={cn("text-base text-gray-600 dark:text-gray-400")}
         >
-          Welcome back! Sign in to access your smart wallet dashboard and manage
-          your digital assets securely.
+          Welcome! Sign in to access your smart wallet dashboard and manage your
+          digital assets securely.
         </CardDescription>
       </CardHeader>
 

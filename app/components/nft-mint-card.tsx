@@ -38,7 +38,7 @@ export default function NftMintCard() {
       <CardHeader className="pb-0">
         <div className="flex justify-between items-center">
           <div>
-            <CardTitle>NFT Collection</CardTitle>
+            <CardTitle className="mb-2">NFT Collection</CardTitle>
             <CardDescription>
               Collect your digital assets instantly. With gas sponsorship, you
               won&apos;t need to worry about having assets in your account to
