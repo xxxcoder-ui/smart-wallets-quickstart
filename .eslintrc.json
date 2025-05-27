@@ -2,5 +2,13 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "max-len": ["error", { "code": 150 }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["components/ui/**/*.{ts,tsx}"],
+      "rules": {
+        "max-len": "off"
+      }
+    }
+  ]
 }

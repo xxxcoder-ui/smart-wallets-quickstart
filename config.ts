@@ -3,8 +3,18 @@ import {
   cookieStorage,
   createConfig,
 } from "@account-kit/react";
-import { alchemy, sepolia } from "@account-kit/infra";
+import { alchemy, baseSepolia, sepolia } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
+
+const API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
+if (!API_KEY) {
+  throw new Error("NEXT_PUBLIC_ALCHEMY_API_KEY is not set");
+}
+
+const PAYMASTER_POLICY_ID = process.env.NEXT_PUBLIC_PAYMASTER_POLICY_ID;
+if (!PAYMASTER_POLICY_ID) {
+  throw new Error("NEXT_PUBLIC_PAYMASTER_POLICY_ID is not set");
+}
 
 const uiConfig: AlchemyAccountsUIConfig = {
   illustrationStyle: "outline",
@@ -16,12 +26,6 @@ const uiConfig: AlchemyAccountsUIConfig = {
         { type: "social", authProviderId: "google", mode: "popup" },
         { type: "social", authProviderId: "facebook", mode: "popup" },
       ],
-      [
-        {
-          type: "external_wallets",
-          walletConnect: { projectId: "your-project-id" },
-        },
-      ],
     ],
     addPasskeyOnSignup: false,
   },
@@ -29,11 +33,12 @@ const uiConfig: AlchemyAccountsUIConfig = {
 
 export const config = createConfig(
   {
-    transport: alchemy({ apiKey: "ALCHEMY_API_KEY" }), // TODO: add your Alchemy API key - https://dashboard.alchemy.com/accounts
-    chain: sepolia,
-    ssr: true, // more about ssr: https://accountkit.alchemy.com/react/ssr
-    storage: cookieStorage, // more about persisting state with cookies: https://accountkit.alchemy.com/react/ssr#persisting-the-account-state
+    transport: alchemy({ apiKey: API_KEY }),
+    chain: baseSepolia,
+    ssr: true, // more about ssr: https://www.alchemy.com/docs/wallets/react/ssr
+    storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
     enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
+    policyId: PAYMASTER_POLICY_ID,
   },
   uiConfig
 );

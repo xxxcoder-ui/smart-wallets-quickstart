@@ -1,34 +1,35 @@
 "use client";
-import {
-  useAuthModal,
-  useLogout,
-  useSignerStatus,
-  useUser,
-} from "@account-kit/react";
+
+import { useSignerStatus } from "@account-kit/react";
+import UserInfoCard from "./components/user-info-card";
+import NftMintCard from "./components/nft-mint-card";
+import LoginCard from "./components/login-card";
+import Header from "./components/header";
+import LearnMore from "./components/learn-more";
 
 export default function Home() {
-  const user = useUser();
-  const { openAuthModal } = useAuthModal();
   const signerStatus = useSignerStatus();
-  const { logout } = useLogout();
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 gap-4 justify-center text-center">
-      {signerStatus.isInitializing ? (
-        <>Loading...</>
-      ) : user ? (
-        <div className="flex flex-col gap-2 p-2">
-          <p className="text-xl font-bold">Success!</p>
-          Logged in as {user.email ?? "anon"}.
-          <button className="btn btn-primary mt-6" onClick={() => logout()}>
-            Log out
-          </button>
-        </div>
-      ) : (
-        <button className="btn btn-primary" onClick={openAuthModal}>
-          Login
-        </button>
-      )}
-    </main>
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+      <Header />
+      <div className="bg-bg-main bg-cover bg-center bg-no-repeat h-[calc(100vh-4rem)]">
+        <main className="container mx-auto px-4 py-8 h-full">
+          {signerStatus.isConnected ? (
+            <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
+              <div className="flex flex-col gap-8">
+                <UserInfoCard />
+                <LearnMore />
+              </div>
+              <NftMintCard />
+            </div>
+          ) : (
+            <div className="flex justify-center items-center h-full pb-[4rem]">
+              <LoginCard />
+            </div>
+          )}
+        </main>
+      </div>
+    </div>
   );
 }
