@@ -11,9 +11,9 @@ if (!API_KEY) {
   throw new Error("NEXT_PUBLIC_ALCHEMY_API_KEY is not set");
 }
 
-const PAYMASTER_POLICY_ID = process.env.NEXT_PUBLIC_PAYMASTER_POLICY_ID;
-if (!PAYMASTER_POLICY_ID) {
-  throw new Error("NEXT_PUBLIC_PAYMASTER_POLICY_ID is not set");
+const SPONSORSHIP_POLICY_ID = process.env.NEXT_PUBLIC_POLICY_ID;
+if (!SPONSORSHIP_POLICY_ID) {
+  throw new Error("NEXT_PUBLIC_POLICY_ID is not set");
 }
 
 const uiConfig: AlchemyAccountsUIConfig = {
@@ -38,7 +38,7 @@ export const config = createConfig(
     ssr: true, // more about ssr: https://www.alchemy.com/docs/wallets/react/ssr
     storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
     enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
-    policyId: PAYMASTER_POLICY_ID,
+    policyId: SPONSORSHIP_POLICY_ID,
   },
   uiConfig
 );

@@ -73,13 +73,13 @@ See what else you can do with [smart wallets](https://www.alchemy.com/docs/walle
 app/           # Next.js pages & components
 components/ui/ # shadcn/ui primitives
 lib/           # constants & helpers
-config.ts      # Account Kit + Paymaster setup
+config.ts      # Account Kit + Gas Sponsorship setup
 tailwind.config.ts
 ```
 
 ## 🏗️ How it works
 
-1. `config.ts` initializes Account Kit with your API key, Base Sepolia chain, and Paymaster policy.
+1. `config.ts` initializes Account Kit with your API key, Base Sepolia chain, and Gas Sponsorship policy.
 2. `Providers` wraps the app with `AlchemyAccountProvider` & React Query.
 3. `LoginCard` opens the authentication modal (`useAuthModal`).
 4. After login, `useSmartAccountClient` exposes the smart wallet.
