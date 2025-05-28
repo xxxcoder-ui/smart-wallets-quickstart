@@ -18,21 +18,21 @@ Choose the setup that fits your workflow.
 ### Option A (recommended)– scaffold a new app
 
 ```bash
-yarn create next-app account-kit-quickstart \
-  -e https://github.com/alchemyplatform/account-kit-quickstart
-cd account-kit-quickstart
+yarn create next-app smart-wallets-quickstart \
+  -e https://github.com/alchemyplatform/smart-wallets-quickstart
+cd smart-wallets-quickstart
 ```
 
 ### Option B – clone the template repo
 
 ```bash
-git clone https://github.com/alchemyplatform/account-kit-quickstart.git
-cd account-kit-quickstart
+git clone https://github.com/alchemyplatform/smart-wallets-quickstart.git
+cd smart-wallets-quickstart
 ```
 
 ### 🔧 Configure
 
-Get your pre-configured API key and policy ID from the [Smart Wallets dashboard](https://dashboard.alchemypreview.com/services/smart-wallets/configuration) by viewing one of your configurations. You will get a default app, configuration, and sponsorship policy created for you to quickly start testing.
+Get your pre-configured API key and policy ID from the [Smart Wallets dashboard](https://dashboard.com/services/smart-wallets/configuration) by viewing one of your configurations. You will get a default app, configuration, and sponsorship policy created for you to quickly start testing.
 
 Once you have your keys, add them to your `.env.local ` file.
 
