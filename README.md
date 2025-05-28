@@ -1,11 +1,12 @@
-# Account Kit Quickstart (Next.js)
+# Smart Wallets Quickstart (Next.js)
 
-Template for building **embedded smart wallets** with [Alchemy Account Kit](https://www.alchemy.com/docs/wallets). Features gas‑sponsored transactions and an NFT minting demo.
+Use this template to get started with **embedded smart wallets** using [Alchemy Account Kit](https://www.alchemy.com/docs/wallets).
 
 ## ✨ Features
 
-- Email, passkey & social login via pre‑built Account Kit modal
-- Smart account with sponsored gas via Paymaster policy
+- Email, passkey & social login using pre‑built UI components
+- Flexible, secure, and cheap smart accounts
+- Gasless transactions powered by ERC-4337 Account Abstraction
 - One‑click NFT mint on Base Sepolia (no ETH required)
 - Server‑side rendering ready – session persisted with cookies
 - TailwindCSS + shadcn/ui components, React Query, TypeScript
@@ -14,7 +15,7 @@ Template for building **embedded smart wallets** with [Alchemy Account Kit](http
 
 Choose the setup that fits your workflow.
 
-### Option A – scaffold a fresh app
+### Option A (recommended)– scaffold a new app
 
 ```bash
 yarn create next-app account-kit-quickstart \
@@ -29,27 +30,42 @@ git clone https://github.com/alchemyplatform/account-kit-quickstart.git
 cd account-kit-quickstart
 ```
 
-Finish configuration:
+### 🔧 Configure
+
+Get your pre-configured API key and policy ID from the [Smart Wallets dashboard](https://dashboard.alchemypreview.com/services/smart-wallets/configuration) by viewing one of your configurations. You will get a default app, configuration, and sponsorship policy created for you to quickly start testing.
+
+Once you have your keys, add them to your `.env.local ` file.
 
 ```bash
 cp .env.example .env.local      # create if missing
 # add NEXT_PUBLIC_ALCHEMY_API_KEY=...
-# add NEXT_PUBLIC_PAYMASTER_POLICY_ID=...
+# add NEXT_PUBLIC_POLICY_ID=...
+```
 
-yarn install
+| Variable                      | Purpose                                                                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_ALCHEMY_API_KEY` | API key for your Alchemy [app](https://dashboard.alchemy.com/services/smart-wallets/configuration)          |
+| `NEXT_PUBLIC_POLICY_ID`       | Gas Manager policy ID for [sponsorship](https://dashboard.alchemy.com/services/smart-wallets/configuration) |
+
+If instead you want to set up your own configurations from scratch you should:
+
+1. Create a new Alchemy [app](https://dashboard.alchemy.com/apps)
+2. Set up a new Smart Wallet [configruation](https://dashboard.alchemy.com/services/smart-wallets/configuration) for your app to specify login methods
+3. Create a gas sponsorship [policy](https://dashboard.alchemy.com/services/gas-manager/configuration) for your app
+
+Note: for production, you should [protect](https://www.alchemy.com/docs/wallets/resources/faqs#how-should-i-protect-my-api-key-and-policy-id-in-the-frontend) your API key and policy ID behind a server rather than exposing client side.
+
+### Run your app!
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000), click **Login**, then **Mint New NFT**.
+Open [http://localhost:3000](http://localhost:3000), first **Login**, then try minting a new NFT.
 
-## 🔧 Configuration
+Congrats! You've created a new smart wallet and sent your first sponsored transaction!
 
-| Variable                          | Purpose                               |
-| --------------------------------- | ------------------------------------- |
-| `NEXT_PUBLIC_ALCHEMY_API_KEY`     | API key from your Alchemy dashboard   |
-| `NEXT_PUBLIC_PAYMASTER_POLICY_ID` | Gas Manager policy ID for sponsorship |
-
-Customize chain, auth methods, or modal style in `config.ts`.
+See what else you can do with [smart wallets](https://www.alchemy.com/docs/wallets/react/overview).
 
 ## 🗂 Project layout
 
