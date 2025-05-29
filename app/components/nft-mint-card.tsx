@@ -38,11 +38,10 @@ export default function NftMintCard() {
       <CardHeader className="pb-0">
         <div className="flex justify-between items-center">
           <div>
-            <CardTitle className="mb-2">NFT Collection</CardTitle>
+            <CardTitle className="mb-2">Mint an NFT with no gas fees</CardTitle>
             <CardDescription>
-              Collect your digital assets instantly. With gas sponsorship, you
-              won&apos;t need to worry about having assets in your account to
-              pay for gas.
+              Users can mint, trade, and swap with no gas fees or signing
+              through gas sponsorship. Try it out.
             </CardDescription>
           </div>
           <Badge
@@ -86,7 +85,9 @@ export default function NftMintCard() {
 
         {error && (
           <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-sm text-red-600">Error: {error}</p>
+            <p className="text-sm text-red-600 break-words overflow-hidden">
+              Error: {error}
+            </p>
           </div>
         )}
 
@@ -122,7 +123,7 @@ export default function NftMintCard() {
           {transactionUrl && (
             <Button
               variant="outline"
-              size="sm"
+              size="lg"
               className="gap-2 w-full sm:w-auto"
               asChild
             >

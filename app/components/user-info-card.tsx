@@ -8,12 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { formatAddress } from "@/lib/utils";
 import { useUser, useSmartAccountClient } from "@account-kit/react";
 
@@ -26,7 +20,9 @@ export default function UserInfo() {
     <Card>
       <CardHeader>
         <CardTitle>User Profile</CardTitle>
-        <CardDescription>Your account information</CardDescription>
+        <CardDescription>
+          Your users are always in control of their non-custodial smart wallet.
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
@@ -40,16 +36,6 @@ export default function UserInfo() {
             <p className="text-sm font-medium text-muted-foreground">
               Smart wallet address
             </p>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Info className="h-4 w-4 text-muted-foreground" />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Your smart wallet address</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
           </div>
           <div className="flex items-center gap-2">
             <Badge variant="outline" className="font-mono text-xs py-1 px-2">

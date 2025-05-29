@@ -1,7 +1,7 @@
 import { parseAbi } from "viem";
 
 export const NFT_CONTRACT_ADDRESS =
-  "0x53f92cFadF935F376fDe59a0f67958400a899a12";
+  "0x6D1BaA7951f26f600b4ABc3a9CF8F18aBf36fac1";
 
 export const NFT_MINTABLE_ABI_PARSED = parseAbi([
   "function mintTo(address recipient) returns (uint256)",
