@@ -7,9 +7,13 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
 - Email, passkey & social login using pre‑built UI components
 - Flexible, secure, and cheap smart accounts
 - Gasless transactions powered by ERC-4337 Account Abstraction
-- One‑click NFT mint on Base Sepolia (no ETH required)
+- One‑click NFT mint on Arbitrum Sepolia (no ETH required)
 - Server‑side rendering ready – session persisted with cookies
 - TailwindCSS + shadcn/ui components, React Query, TypeScript
+
+## 📍 Network & Demo Contract
+
+This quickstart is configured to run on **Arbitrum Sepolia** testnet. A free demo NFT contract has been deployed specifically for this quickstart, allowing you to mint NFTs without any setup or deployment steps. The contract is pre-configured and ready to use out of the box.
 
 ## 🚀 Quick start
 

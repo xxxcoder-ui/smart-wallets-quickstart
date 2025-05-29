@@ -34,6 +34,7 @@ const uiConfig: AlchemyAccountsUIConfig = {
 export const config = createConfig(
   {
     transport: alchemy({ apiKey: API_KEY }),
+    // Note: This quickstart is configured for Arbitrum Sepolia.
     chain: arbitrumSepolia,
     ssr: true, // more about ssr: https://www.alchemy.com/docs/wallets/react/ssr
     storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
