@@ -7,27 +7,21 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
 - Email, passkey & social login using pre‑built UI components
 - Flexible, secure, and cheap smart accounts
 - Gasless transactions powered by ERC-4337 Account Abstraction
-- One‑click NFT mint on Base Sepolia (no ETH required)
+- One‑click NFT mint on Arbitrum Sepolia (no ETH required)
 - Server‑side rendering ready – session persisted with cookies
 - TailwindCSS + shadcn/ui components, React Query, TypeScript
 
+## 📍 Network & Demo Contract
+
+This quickstart is configured to run on **Arbitrum Sepolia** testnet. A free demo NFT contract has been deployed specifically for this quickstart, allowing you to mint NFTs without any setup or deployment steps. The contract is pre-configured and ready to use out of the box.
+
 ## 🚀 Quick start
 
-Choose the setup that fits your workflow.
-
-### Option A (recommended)– scaffold a new app
+### Scaffold a new app
 
 ```bash
-yarn create next-app smart-wallets-quickstart \
-  -e https://github.com/alchemyplatform/account-kit-quickstart
+npm create next-app smart-wallets-quickstart -- --example https://github.com/alchemyplatform/smart-wallets-quickstart
 cd smart-wallets-quickstart
-```
-
-### Option B – clone the template repo
-
-```bash
-git clone https://github.com/alchemyplatform/account-kit-quickstart.git
-cd account-kit-quickstart
 ```
 
 ### 🔧 Configure
@@ -39,13 +33,13 @@ Once you have your keys, add them to your `.env.local ` file.
 ```bash
 cp .env.example .env.local      # create if missing
 # add NEXT_PUBLIC_ALCHEMY_API_KEY=...
-# add NEXT_PUBLIC_POLICY_ID=...
+# add NEXT_PUBLIC_ALCHEMY_POLICY_ID=...
 ```
 
-| Variable                      | Purpose                                                                                                     |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_ALCHEMY_API_KEY` | API key for your Alchemy [app](https://dashboard.alchemy.com/services/smart-wallets/configuration)          |
-| `NEXT_PUBLIC_POLICY_ID`       | Gas Manager policy ID for [sponsorship](https://dashboard.alchemy.com/services/smart-wallets/configuration) |
+| Variable                        | Purpose                                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_ALCHEMY_API_KEY`   | API key for your Alchemy [app](https://dashboard.alchemy.com/services/smart-wallets/configuration)          |
+| `NEXT_PUBLIC_ALCHEMY_POLICY_ID` | Gas Manager policy ID for [sponsorship](https://dashboard.alchemy.com/services/smart-wallets/configuration) |
 
 If instead you want to set up your own configurations from scratch you should:
 
@@ -58,7 +52,7 @@ Note: for production, you should [protect](https://www.alchemy.com/docs/wallets/
 ### Run your app!
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000), first **Login**, then try minting a new NFT.
@@ -88,16 +82,15 @@ tailwind.config.ts
 ## 📚 Docs & resources
 
 - React Quickstart → [https://www.alchemy.com/docs/wallets/react/quickstart](https://www.alchemy.com/docs/wallets/react/quickstart)
-- Embedded accounts overview → [https://www.alchemy.com/docs/wallets/react/overview](https://www.alchemy.com/docs/wallets/react/overview)
 - Gas Manager quickstart → [https://www.alchemy.com/docs/wallets/infra/quickstart](https://www.alchemy.com/docs/wallets/infra/quickstart)
 
 ## 🖥 Scripts
 
 ```bash
-yarn dev     # start development server
-yarn build   # production build
-yarn start   # run production build
-yarn lint    # lint code
+npm run dev     # start development server
+npm run build   # production build
+npm run start   # run production build
+npm run lint    # lint code
 ```
 
 ## 🛂 License
