@@ -73,7 +73,7 @@ tailwind.config.ts
 
 ## 🏗️ How it works
 
-1. `config.ts` initializes Account Kit with your API key, Base Sepolia chain, and Gas Sponsorship policy.
+1. `config.ts` initializes Account Kit with your API key, Arbitrum Sepolia chain, and Gas Sponsorship policy.
 2. `Providers` wraps the app with `AlchemyAccountProvider` & React Query.
 3. `LoginCard` opens the authentication modal (`useAuthModal`).
 4. After login, `useSmartAccountClient` exposes the smart wallet.

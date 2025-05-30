@@ -57,9 +57,9 @@ export default function UserInfo() {
               className="h-6 w-6"
               onClick={() => {
                 const address = client?.account?.address;
-                if (address) {
+                if (address && client?.chain?.blockExplorers?.default?.url) {
                   window.open(
-                    `https://sepolia.basescan.org/address/${address}`,
+                    `${client.chain.blockExplorers.default.url}/address/${address}`,
                     "_blank"
                   );
                 }
