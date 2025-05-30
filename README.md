@@ -11,6 +11,8 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
 - Server‑side rendering ready – session persisted with cookies
 - TailwindCSS + shadcn/ui components, React Query, TypeScript
 
+![Smart Wallet Quickstart](https://github.com/user-attachments/assets/2903fb78-e632-4aaa-befd-5775c60e1ca2)
+
 ## 📍 Network & Demo Contract
 
 This quickstart is configured to run on **Arbitrum Sepolia** testnet. A free demo NFT contract has been deployed specifically for this quickstart, allowing you to mint NFTs without any setup or deployment steps. The contract is pre-configured and ready to use out of the box.
