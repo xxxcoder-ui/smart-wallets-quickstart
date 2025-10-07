@@ -8,6 +8,19 @@ import { QueryClient } from "@tanstack/react-query";
 
 import { AlchemyAccountsUIConfig, createConfig } from "@account-kit/react";
 import { sepolia, alchemy } from "@account-kit/infra";
+
+import React from "react";
+    import { AuthCard } from "@account-kit/react";
+    
+    export default function MyLoginPage() {
+      return (
+        <div className="flex flex-row p-4 bg-white border border-gray-200 rounded-lg">
+          <AuthCard />
+        </div>
+      );
+    }
+
+
 const uiConfig: AlchemyAccountsUIConfig = {
   auth: {
     sections: [
@@ -23,6 +36,7 @@ const uiConfig: AlchemyAccountsUIConfig = {
     ],
   },
 };
+
 export const config = createConfig(
   {
     transport: alchemy({ apiKey: "e60ay6ivqy39fbnq7nv21hf0iinwky2e" }),
@@ -52,7 +66,7 @@ const uiConfig: AlchemyAccountsUIConfig = {
         { type: "social", authProviderId: "facebook", mode: "popup" },
       ],
     ],
-    addPasskeyOnSignup: true,
+    addPasskeyOnSignup: false,
   },
 };
 
