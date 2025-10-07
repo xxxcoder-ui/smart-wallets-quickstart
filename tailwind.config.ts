@@ -1,70 +1,53 @@
-/** @type {import('tailwindcss').Config} */
-import { createColorSet, withAccountKitUi } from "@account-kit/react/tailwind";
+import { type PluginAPI } from "tailwindcss/types/config";
 
-export default withAccountKitUi({
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
-        },
-      },
-      backgroundImage: {
-        "bg-main": "url('/bg-main.webp')",
-      },
-    },
-  },
+export type ColorVariant = "dark" | "light";
+export type ColorVariantRecord = Record<ColorVariant, string>;
+
+export interface AccountKitTheme {
   colors: {
-    "btn-primary": createColorSet("#E82594", "#FF66CC"),
-    "fg-accent-brand": createColorSet("#E82594", "#FF66CC"),
-  },
-  plugins: [require("tailwindcss-animate")],
-});
+    active: ColorVariantRecord;
+    static: ColorVariantRecord;
+    critical: ColorVariantRecord;
+
+    // button colors
+    "btn-primary": ColorVariantRecord;
+    "btn-secondary": ColorVariantRecord;
+    "btn-auth": ColorVariantRecord;
+
+    // fg colors
+    "fg-primary": ColorVariantRecord;
+    "fg-secondary": ColorVariantRecord;
+    "fg-tertiary": ColorVariantRecord;
+    "fg-invert": ColorVariantRecord;
+    "fg-disabled": ColorVariantRecord;
+    "fg-accent-brand": ColorVariantRecord;
+    "fg-critical": ColorVariantRecord;
+    "fg-success": ColorVariantRecord;
+
+    // surface colors
+    "bg-surface-default": ColorVariantRecord;
+    "bg-surface-subtle": ColorVariantRecord;
+    "bg-surface-inset": ColorVariantRecord;
+    "bg-surface-critical": ColorVariantRecord;
+    "bg-surface-success": ColorVariantRecord;
+    "bg-surface-warning": ColorVariantRecord;
+    "bg-surface-error": ColorVariantRecord;
+  };
+  // these define the border radius base for the various components.
+  // the mapped value applies to the smallest value used and everything scales up from there by multiple of 2
+  borderRadius: "none" | "xs" | "sm" | "md" | "lg";
+}
+
+export type AccountKitThemeColor = keyof AccountKitTheme["colors"];
+
+export type DeepPartial<T> = T extends object
+  ? {
+      [K in keyof T]?: DeepPartial<T[K]>;
+    }
+  : T;
+
+export type AccountKitThemeOverride = DeepPartial<AccountKitTheme>;
+
+export type ComponentDef = Parameters<PluginAPI["addComponents"]>[0];
+export type UtilityDef = Parameters<PluginAPI["addUtilities"]>[0];
+export type ThemeFn = PluginAPI["theme"];
