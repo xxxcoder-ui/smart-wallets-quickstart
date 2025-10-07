@@ -3,22 +3,9 @@ import {
   cookieStorage,
   createConfig,
 } from "@account-kit/react";
-import { alchemy, arbitrumSepolia } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
-
 import { AlchemyAccountsUIConfig, createConfig } from "@account-kit/react";
 import { sepolia, alchemy } from "@account-kit/infra";
-
-import React from "react";
-    import { AuthCard } from "@account-kit/react";
-    
-    export default function MyLoginPage() {
-      return (
-        <div className="flex flex-row p-4 bg-white border border-gray-200 rounded-lg">
-          <AuthCard />
-        </div>
-      );
-    }
 
 
 const uiConfig: AlchemyAccountsUIConfig = {
