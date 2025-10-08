@@ -14,7 +14,6 @@ export const config = createConfig({
   chain: sepolia,
   storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
   enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
-    
   chains: [
     {
       chain: mainnet,
@@ -23,15 +22,11 @@ export const config = createConfig({
     },
     {
       chain: sepolia,
-      storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
-      enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
-    
       // optional: override the default transport for this chain
       transport: alchemy({ apiKey: "OTHER_API_KEY" }),
       // optional: sponsor gas for this chain
       policyId: "SEPOLIA_GAS_MANAGER_POLICY_ID",
     },
-    uiConfig
   ],
 });
 
