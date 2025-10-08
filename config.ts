@@ -18,9 +18,6 @@ export const config = createConfig({
   chains: [
     {
       chain: mainnet,
-      storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
-      enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
-    
       // optional: sponsor gas for this chain
       policyId: "MAINNET_GAS_MANAGER_POLICY_ID",
     },
