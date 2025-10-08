@@ -5,6 +5,34 @@ import {
 } from "@account-kit/react";
 import { alchemy, arbitrumSepolia } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
+import { createConfig } from "@account-kit/core";
+import { sepolia, mainnet, alchemy } from "@account-kit/infra";
+import { setChain } from "@account-kit/core";
+import { mainnet } from "@account-kit/infra";
+import { config } from "./config";
+
+await setChain(config, mainnet);
+
+export const config = createConfig({
+  // use this transport for all chains
+  transport: alchemy({ apiKey: "ALCHEMY_API_KEY" }),
+  // this is the default chain
+  chain: sepolia,
+  chains: [
+    {
+      chain: mainnet,
+      // optional: sponsor gas for this chain
+      policyId: "MAINNET_GAS_MANAGER_POLICY_ID",
+    },
+    {
+      chain: sepolia,
+      // optional: override the default transport for this chain
+      transport: alchemy({ apiKey: "OTHER_API_KEY" }),
+      // optional: sponsor gas for this chain
+      policyId: "SEPOLIA_GAS_MANAGER_POLICY_ID",
+    },
+  ],
+});
 
 const API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 if (!API_KEY) {
