@@ -45,8 +45,7 @@ export const config = createConfig(
 );
 
 import { type Address, toHex } from "viem";
-
-export const config = {
+{
   policyId: process.env.ALCHEMY_POLICY_ID!,
   gasToken: "0xD3b483Ed22B20858313dC420b6858Ab2bca4a562" as Address, // USDC on Sepolia
   approveBelow: toHex(1000000n), // 1 USDC
