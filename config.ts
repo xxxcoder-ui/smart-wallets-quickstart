@@ -3,7 +3,7 @@ import {
   cookieStorage,
   createConfig,
 } from "@account-kit/react";
-import { alchemy, Sepolia } from "@account-kit/infra";
+import { alchemy, Polygon } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
 
 const API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
@@ -35,7 +35,7 @@ export const config = createConfig(
   {
     transport: alchemy({ apiKey: API_KEY }),
     // Note: This quickstart is configured for Arbitrum Sepolia.
-    chain: Sepolia,
+    chain: Polygon,
     ssr: true, // more about ssr: https://www.alchemy.com/docs/wallets/react/ssr
     storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
     enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
@@ -43,9 +43,5 @@ export const config = createConfig(
   },
   uiConfig
 );
-
-import { type Address, toHex } from "viem";
-
-
 
 export const queryClient = new QueryClient();
