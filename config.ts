@@ -5,8 +5,6 @@ import {
 } from "@account-kit/react";
 import { alchemy, arbitrumSepolia } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
-import { createConfig } from "@account-kit/core";
-import { sepolia, mainnet, alchemy } from "@account-kit/infra";
 import { setChain } from "@account-kit/core";
 import { mainnet } from "@account-kit/infra";
 import { config } from "./config";
