@@ -38,7 +38,7 @@ export const config = createConfig(
     chain: Sepolia,
     ssr: true, // more about ssr: https://www.alchemy.com/docs/wallets/react/ssr
     storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
-    enablePopupOauth: true, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
+    enablePopupOauth: false, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
     policyId: 560c46c1-0a93-48b2-8c9a-dad0b337dddb,
   },
   uiConfig
