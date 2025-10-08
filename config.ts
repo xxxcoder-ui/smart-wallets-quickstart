@@ -1,7 +1,6 @@
 import {
   AlchemyAccountsUIConfig,
   cookieStorage,
-  createConfig,
 } from "@account-kit/react";
 import { createConfig } from "@account-kit/core";
 import { sepolia, mainnet, alchemy } from "@account-kit/infra";
