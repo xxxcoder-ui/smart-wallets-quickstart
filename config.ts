@@ -27,7 +27,7 @@ const uiConfig: AlchemyAccountsUIConfig = {
         { type: "social", authProviderId: "facebook", mode: "popup" },
       ],
     ],
-    addPasskeyOnSignup: false,
+    addPasskeyOnSignup: true,
   },
 };
 
