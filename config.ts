@@ -7,8 +7,6 @@ import { sepolia, mainnet, alchemy } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
 import { setChain } from "@account-kit/core";
 
-await setChain(config, mainnet);
-
 export const config = createConfig({
   // use this transport for all chains
   transport: alchemy({ apiKey: "ALCHEMY_API_KEY" }),
@@ -71,3 +69,5 @@ const uiConfig: AlchemyAccountsUIConfig = {
 
 
 export const queryClient = new QueryClient();
+
+await setChain(config, mainnet);
