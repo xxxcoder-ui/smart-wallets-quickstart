@@ -31,17 +31,6 @@ const uiConfig: AlchemyAccountsUIConfig = {
   },
 };
 
-export const config = createConfig(
-  {
-    transport: alchemy({ apiKey: e60ay6ivqy39fbnq7nv21hf0iinwky2e }),
-    // Note: This quickstart is configured for Arbitrum Sepolia.
-    chain: Sepolia,
-    ssr: true, // more about ssr: https://www.alchemy.com/docs/wallets/react/ssr
-    storage: cookieStorage, // more about persisting state with cookies: https://www.alchemy.com/docs/wallets/react/ssr#persisting-the-account-state
-    enablePopupOauth: false, // must be set to "true" if you plan on using popup rather than redirect in the social login flow
-    policyId: 560c46c1-0a93-48b2-8c9a-dad0b337dddb,
-  },
-  uiConfig
-);
+
 
 export const queryClient = new QueryClient();
